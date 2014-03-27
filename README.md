@@ -1,4 +1,6 @@
-### Build with bootstrap, with power of sass and automate all your tasks with grunt.
+## Simple starting point for your web projects.
+> Build with bootstrap, with power of sass and automate all your tasks with grunt.
+
 
 ###It includes:
 - [Bootstrap sass](http://getbootstrap.com/ "Bootstrap sass").
