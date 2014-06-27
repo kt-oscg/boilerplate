@@ -1,0 +1,22 @@
+{
+  "name": "Boilerplate",
+  "version": "0.1",
+  "homepage": "https://github.com/jaydeepgajera/boilerplate",
+  "authors": [
+    "jaydeepgajera90@gmail.com"
+  ],
+  "description": "Boilerplate for general web project",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-twbs": "~3.2.0",
+    "fontawesome": "~4.1.0"
+  }
+}

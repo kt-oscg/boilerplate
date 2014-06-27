@@ -1,56 +1,36 @@
-// Core variables and mixins
-@import "variables";
-@import "mixins";
+// All helpers stuff
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "helpers/placeholders";
+@import "helpers/utility";
+@import "helpers/states";
 
-// Reset and dependencies
-@import "normalize";
-@import "print";
-// @import "glyphicons";
+// Resets and base typography
+@import "base/normalize";
+@import "base/typography";
 
-// Core CSS
-@import "scaffolding";
-@import "type";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
+@import "bower_components/bootstrap-sass-twbs/assets/stylesheets/bootstrap";
+@import "bower_components/fontawesome/scss/font-awesome";
 
-// Components
-@import "component-animations";
-@import "dropdowns";
-@import "button-groups";
-@import "input-groups";
-@import "navs";
-@import "navbar";
-@import "breadcrumbs";
-@import "pagination";
-@import "pager";
-@import "labels";
-@import "badges";
-@import "jumbotron";
-@import "thumbnails";
-@import "alerts";
-@import "progress-bars";
-@import "media";
-@import "list-group";
-@import "panels";
-@import "responsive-embed";
-@import "wells";
-@import "close";
+// Layout 
+@import "layout/grid";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/footer";
+@import "layout/home";
 
-// Components w/ JavaScript
-@import "modals";
-@import "tooltip";
-@import "popovers";
-@import "carousel";
 
-// Utility classes
-@import "utilities";
-@import "responsive-utilities";
+//Core components
 
-//Font awesome
-@import "vendor/font-awesome/font-awesome";
+@import "components/animations";
+@import "components/buttons";
+@import "components/dropdowns";
+@import "components/forms";
+@import "components/icons";
+@import "components/navigations";
+@import "components/tables";
 
-//Author stylesheets
-@import "main";
+
+
+@import "pages/main"
