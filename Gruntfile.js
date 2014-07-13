@@ -4,6 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     
+
     sass: {                              
       dist: {                            
         options: {                       
@@ -11,20 +12,20 @@ module.exports = function(grunt) {
           sourcemap: true
         },
         files: {                         
-          'css/main.min.css': 'sass/styles.scss'
+          'dist/css/style.css': 'sass/styles.scss'
         }
       }
     },
 
     concat: {
-        dist: {
-          src: [
-            'js/libs/*.js',
-            'js/main.js'
-          ],
-          dest: 'js/build/production.js',
-        }
-      },
+      dist: {
+        src: [
+        'js/libs/*.js',
+        'js/main.js'
+        ],
+        dest: 'js/build/production.js',
+      }
+    },
 
 
     uglify: {
@@ -35,37 +36,68 @@ module.exports = function(grunt) {
     },
 
     imagemin: {
-        dynamic: {
-          files: [{
-            expand: true,
-            cwd: 'images/',
-            src: ['**/*.{png,jpg,gif}'],
-            dest: 'img/'
-          }]
-        }
-      },
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'img/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dist/img/'
+        }]
+      }
+    },
 
-       watch: {
-        scripts: {
-          files: ['js/*.js'],
-          tasks: ['concat', 'uglify'],
-          options: {
-            spawn: false,
-          },
+    htmlmin: {
+      dist: {       
+        options: {  
+          removeComments: true,
+          // collapseWhitespace: true
         },
-        css: {
-          files: ['sass/*.scss'],
-          tasks: ['sass'],
-          options: {
-            spawn: false,
+        files: {    
+          'dist/index.html': 'index.html',
+          'dist/404.html': '404.html'
+        },
+        dev: {                               
+          files: {
+            'dist/index.html': 'index.html',
+            'dist/404.html': '404.html'
           }
         }
       }
+    },
+
+    copy: {
+      main: {
+        files: [
+      // includes files within path and its sub-directories
+      {expand: true, src: ['js/**'], dest: 'dist/'},
+      {expand: true, src: ['fonts/**'], dest: 'dist/'},
+      ]
+    }
+  },
+
+  watch: {
+    scripts: {
+      files: ['js/*.js'],
+      tasks: ['concat', 'uglify'],
+      options: {
+        spawn: false,
+      },
+    },
+    css: {
+      files: ['sass/*.scss'],
+      tasks: ['sass'],
+      options: {
+        spawn: false,
+      }
+    }
+  }
 
 
 });
 
   // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -73,6 +105,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass','concat','uglify','imagemin','watch']);
+  grunt.registerTask('default', ['htmlmin', 'copy' ,'sass','concat','uglify','imagemin','watch']);
 
 };
