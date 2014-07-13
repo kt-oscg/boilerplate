@@ -10,8 +10,8 @@
 @import "base/normalize";
 @import "base/typography";
 
-@import "bower_components/bootstrap-sass-twbs/assets/stylesheets/bootstrap";
-@import "bower_components/fontawesome/scss/font-awesome";
+@import "vendors/font-awesome";
+@import "vendors/media-queries";
 
 // Layout 
 @import "layout/grid";
@@ -33,4 +33,4 @@
 
 
 
-@import "pages/main"
+@import "pages/home"
