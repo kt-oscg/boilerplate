@@ -1,0 +1,130 @@
+body {
+    font-size: 11px;
+}
+
+.clinTMS {
+    .navbar {
+        margin-bottom: 10px;
+    }
+    .sponsor-view-table,
+    .sponsor-view-table,
+    .sponsor-edit-table,
+    .sponsor-edit-table,
+    .study-create-table,
+    .study-create-table {
+        .table th,
+        .table td {
+            border-top: none !important;
+            vertical-align: middle;
+        }
+    }
+    .main-header {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .clintms-table,
+    .sponsor-edit-table,
+    .study-create-table,
+    {
+        .form-control {
+            height: auto;
+            font-size: 11px;
+            padding: 4px 6px;
+        }
+    }
+    .sponsor-edit-table {
+        .form-control {
+            width: 80%;
+        }
+    }
+    .required label {
+        font-weight: bold;
+    }
+    .required label:after {
+        color: #e32;
+        content: ' *';
+        display: inline;
+    }
+    .study-create-table {
+        .form-control {
+            width: 50%;
+        }
+        .study-create-table--select-sponsor-field {
+            .form-control,
+            button {
+                float: left;
+            }
+            button {
+                margin-left: 20px;
+            }
+        }
+    }
+    .sponsor-viewEdit-buttons {
+        float: right;
+        margin-top: -20px;
+    }
+    .wizard-steps-wrapper {
+        .panel,
+        .panel-default {
+            border: none !important;
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+        }
+    }
+    .clinTMS-modal .modal-dialog {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        .modal-content {
+            height: 100%;
+            border-radius: 0;
+            overflow: auto;
+            background-clip: border-box;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            min-height: 100%;
+            padding: 100px 0;
+            .modal-title {
+                text-align: center;
+                text-transform: capitalize;
+            }
+            .close-modal {
+                position: absolute;
+                width: 75px;
+                height: 75px;
+                background-color: transparent;
+                top: 25px;
+                right: 25px;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.3;
+                }
+                .lr {
+                    height: 75px;
+                    width: 1px;
+                    margin-left: 35px;
+                    background-color: $brand-primary;
+                    transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    /* IE 9 */
+                    -webkit-transform: rotate(45deg);
+                    /* Safari and Chrome */
+                    z-index: 1051;
+                    .rl {
+                        height: 75px;
+                        width: 1px;
+                        background-color: $brand-primary;
+                        transform: rotate(90deg);
+                        -ms-transform: rotate(90deg);
+                        /* IE 9 */
+                        -webkit-transform: rotate(90deg);
+                        /* Safari and Chrome */
+                        z-index: 1052;
+                    }
+                }
+            }
+        }
+    }
+}

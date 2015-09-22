@@ -1,9 +1,9 @@
 {
-  "name": "Boilerplate",
+  "name": "OSCG Boilerplate",
   "version": "0.1",
-  "homepage": "https://github.com/jaydeepgajera/boilerplate",
+  "homepage": "https://github.com/kt-oscg/boilerplate",
   "authors": [
-    "Jaydeep Gajera <maa.gajera@gmail.com>"
+    "Kailash Thakur <kt@openscg.com>"
   ],
   "description": "Boilerplate dependencies",
   "license": "MIT",

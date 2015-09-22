@@ -1,1 +1,1 @@
-console.log("Running well !!");
+console.log("ClinTMS Running well !!");

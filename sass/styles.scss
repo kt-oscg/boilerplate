@@ -1,4 +1,6 @@
+
 // All helpers stuff
+@import "bootstrap";
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
@@ -7,11 +9,13 @@
 @import "helpers/states";
 
 // Resets and base typography
+@import "base/base";
 @import "base/normalize";
 @import "base/typography";
 
-@import "vendors/font-awesome";
+@import "fontawesome/font-awesome";
 @import "vendors/media-queries";
+@import "jqui/jquilightness";
 
 // Layout 
 @import "layout/grid";
@@ -31,6 +35,4 @@
 @import "components/navigations";
 @import "components/tables";
 
-
-
-@import "pages/home"
+@import "pages/home";
